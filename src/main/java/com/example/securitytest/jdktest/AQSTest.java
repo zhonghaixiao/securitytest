@@ -1,5 +1,6 @@
 package com.example.securitytest.jdktest;
 
+import io.netty.channel.Channel;
 import io.netty.channel.socket.nio.NioServerSocketChannel;
 
 import java.io.IOException;
@@ -21,8 +22,6 @@ public class AQSTest {
     static class ReactorTask implements  Runnable{
 //        NioServerSocketChannel
 //        Channel
-
-        Executor
 
         private Selector selector;
         public ReactorTask() throws IOException {
