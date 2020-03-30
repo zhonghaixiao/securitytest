@@ -20,15 +20,6 @@ public class ClientMain {
 //        ChannelFuture
 //        NioServerSocketChannel
 
-
-
-
-
-
-
-
-
-
         EventLoopGroup workGroup = new NioEventLoopGroup();
         Bootstrap bootstrap = new Bootstrap();
         ChannelFuture future = bootstrap.group(workGroup)

@@ -17,6 +17,7 @@ public class ServerMain {
 
     public static void main(String[] args) throws InterruptedException {
 //        NioEventLoop
+        System.setProperty("io.netty.noKeySetOptimization", "true");
         EventLoopGroup bossGroup = new NioEventLoopGroup();
         EventLoopGroup workGroup = new NioEventLoopGroup();
         ServerBootstrap bootstrap = new ServerBootstrap();
@@ -33,7 +34,7 @@ public class ServerMain {
                 .childOption(ChannelOption.TCP_NODELAY, true);
         ChannelFuture future = bootstrap.bind().sync();
         future.channel().closeFuture().sync();
-
+//        NioEventLoop
     }
 
 }
